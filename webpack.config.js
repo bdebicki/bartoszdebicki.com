@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PostCSSPresetEnv = require('postcss-preset-env');
+const SvgToMiniDataURI = require('mini-svg-data-uri');
 
 const config = {
 	devtool: 'eval',
@@ -44,11 +45,15 @@ const config = {
 				],
 			},
 			{
-				test: /\.svg$/,
-				loader: 'file-loader',
-				options: {
-					name: '[name].[hash].[ext]',
-				}
+				test: /\.svg$/i,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							generator: (content) => SvgToMiniDataURI(content.toString()),
+						},
+					},
+				],
 			},
 			{
 				test: /\.html$/,
