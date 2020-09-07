@@ -1,29 +1,26 @@
-/* CORE: global styles */
+@import './colors';
+@import './typography';
 
 //local vars
-@defaultFontColor: #000000;
-@selectionColor: @defaultFontColor;
-@selectionFontColor: #fff;
+@defaultFontColor: @color-black;
+@selectionColor: @color-darkGray;
+@selectionFontColor: @color-white;
 @linkColor: inherit;
-@h1color: @lightGray;
-@h2color: @defaultFontColor;
-@defaultFontSize: 14px;
-@h1fontSize: 32px;
-@h2fontSize: 24px;
-@defaultLineHeight: 18px;
-@h1lineHeight: 40px;
-@h2lineHeight: 28px;
-
+@h1color: inherit;
+@defaultFontSize: 25px;
+@h1fontSize: 40px;
+@defaultLineHeight: 38px;
+@h1lineHeight: 51px;
 
 html {
 	min-height: 100%;
-	background: #ffffff;
+	background: @color-white;
 	color: @defaultFontColor;
 }
 body {
 	min-width: 320px;
 	height: 100%;
-	font-family: Arial, sans-serif;
+	font-family: @fontName;
 	font-size: @defaultFontSize;
 	line-height: @defaultLineHeight;
 
