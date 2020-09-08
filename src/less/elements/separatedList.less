@@ -1,0 +1,18 @@
+@LIST_CLASS_BASE: ~'separatedList';
+@LIST_ITEM_MODIFIER: ~'item';
+
+.@{LIST_CLASS_BASE} {
+	display: flex;
+	flex-direction: row;
+
+	&__@{LIST_ITEM_MODIFIER} {
+		+ .@{LIST_CLASS_BASE}__@{LIST_ITEM_MODIFIER} {
+			margin-left: 0.4em;
+
+			&:before {
+				content: '/';
+				margin-right: 0.4em;
+			}
+		}
+	}
+}
