@@ -7,10 +7,11 @@
 @selectionFontColor: @color-white;
 @linkColor: inherit;
 @h1color: inherit;
-@defaultFontSize: 25px;
-@h1fontSize: 40px;
-@defaultLineHeight: 38px;
-@h1lineHeight: 51px;
+@defaultFontSize: @fontSize--m;
+@defaultLineHeight: @lineHeight--m;
+@h1fontSize: @fontSize--xl;
+@h1lineHeight: @lineHeight--xl;
+@paragraphSpacing: 14px;
 
 html {
 	min-height: 100%;
@@ -23,34 +24,16 @@ body {
 	font-family: @fontName;
 	font-size: @defaultFontSize;
 	line-height: @defaultLineHeight;
-
-	@media screen and (max-width: 1279px) {
-		font-size: @defaultFontSize - 1;
-		line-height: @defaultLineHeight - 2;
-	}
 }
 
 h1 {
 	color: @h1color;
 	font-size: @h1fontSize;
 	line-height: @h1lineHeight;
-
-	@media screen and (max-width: 1279px) {
-		font-size: @h1fontSize - 2;
-		line-height: @h1lineHeight - 2;
-	}
-	@media screen and (max-width: 600px) {
-		font-size: @h1fontSize - 3;
-		line-height: @h1lineHeight - 3;
-	}
-	@media screen and (max-width: 479px) {
-		font-size: @h1fontSize - 4;
-		line-height: @h1lineHeight - 4;
-	}
 }
 
 p {
-	margin-bottom: @defaultLineHeight;
+	margin-bottom: @paragraphSpacing;
 }
 
 a {
