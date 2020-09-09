@@ -1,3 +1,5 @@
+@import '../basis/spacings';
+
 @LIST_CLASS_BASE: ~'separatedList';
 @LIST_ITEM_MODIFIER: ~'item';
 
@@ -7,11 +9,11 @@
 
 	&__@{LIST_ITEM_MODIFIER} {
 		+ .@{LIST_CLASS_BASE}__@{LIST_ITEM_MODIFIER} {
-			margin-left: 0.4em;
+			margin-left: @spaceSize;
 
 			&:before {
 				content: '/';
-				margin-right: 0.4em;
+				margin-right: @spaceSize;
 			}
 		}
 	}
