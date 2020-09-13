@@ -1,9 +1,11 @@
+@import '../basis/colors';
+@import '../basis/settings';
 @import '../basis/spacings';
 
 .icon {
 	@pseudoEl: ~'after';
 
-	.iconBase(@width, @height, @name, @align: center) {
+	.iconBase(@width, @height, @name, @color: @defaultFontColor,@align: center) {
 		display: inline-flex;
 		align-items: @align;
 
@@ -12,8 +14,9 @@
 			display: inline-block;
 			width: @width;
 			height: @height;
-			background-image: url("../../img/@{name}.svg");
-			background-size: 100% 100%;
+			background-color: @color;
+			mask-image: url("../../img/@{name}.svg");
+			mask-size: cover;
 		}
 	}
 
@@ -38,12 +41,13 @@
 		.iconBase(
 			@width: 18px,
 			@height: 15px,
-			@name: 'heart'
+			@name: 'heart',
+			@color: @color-pink
 		);
 	}
 	&--ticket {
 		.iconBase(
-			@width: 39px,
+			@width: 40px,
 			@height: 28px,
 			@name: 'ticket',
 			@align: 'baseline'
