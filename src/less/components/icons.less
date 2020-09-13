@@ -1,18 +1,29 @@
 @import '../basis/spacings';
 
 .icon {
+	@pseudoEl: ~'after';
+
 	.iconBase(@width, @height, @name, @align: center) {
 		display: inline-flex;
 		align-items: @align;
 
-		&:after {
+		&:@{pseudoEl} {
 			content: '';
 			display: inline-block;
 			width: @width;
 			height: @height;
-			margin-left: @spaceSize;
 			background-image: url("../../img/@{name}.svg");
 			background-size: 100% 100%;
+		}
+	}
+
+	&--replace-content {
+		overflow: hidden;
+		text-indent: -5000px;
+	}
+	&--in-text {
+		&:@{pseudoEl} {
+			margin-left: @spaceSize;
 		}
 	}
 
