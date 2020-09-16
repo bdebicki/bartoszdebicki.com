@@ -1,4 +1,4 @@
-import { HOVER_DECORATION, HOVER_DECORATORS } from '../enums/linkHandlers';
+import { HOVER_DECORATION } from '../enums/linkHandlers';
 import * as DECORATION_COLOR from '../enums/linkDecoratorColors';
 import * as DECORATION_STYLE from '../enums/linkDecoratorStyles';
 import { getRandomFromArray } from './getRandomFromArray';
@@ -16,8 +16,8 @@ let currentColor;
 let currentStyle;
 
 function setDecorationClasses(e) {
-  const color = getRandomFromArray(Object.values(DECORATION_COLOR));
-  const style = getRandomFromArray(Object.values(DECORATION_STYLE));
+  const color = `linkDecoratorColor--${getRandomFromArray(Object.values(DECORATION_COLOR))}`;
+  const style = `linkDecoratorStyle--${getRandomFromArray(Object.values(DECORATION_STYLE))}`;
 
   e.target.classList.add(color);
   currentColor = color;
