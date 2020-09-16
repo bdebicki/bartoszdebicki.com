@@ -1,3 +1,3 @@
-import { setHoverDecorationEvents } from './helpers/hoverDecoration';
+import setHoverDecorationEvents from './hoverDecorator/setHoverDecorationEvents';
 
-window.addEventListener('load', setHoverDecorationEvents)
+window.addEventListener('load', setHoverDecorationEvents);
