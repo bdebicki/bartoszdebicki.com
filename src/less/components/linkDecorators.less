@@ -1,34 +1,99 @@
 .linkDecoratorColor {
 	&--color1 {
-		text-decoration-color: blue;
+		&:before {
+			--decorator-color: #54e7fb;
+		}
 	}
 	&--color2 {
-		text-decoration-color: red;
+		&:before {
+			--decorator-color: #3290FE;
+		}
 	}
 	&--color3 {
-		text-decoration-color: green;
+		&:before {
+			--decorator-color: #5E23FF;
+		}
 	}
 	&--color4 {
-		text-decoration-color: yellow;
+		&:before {
+			--decorator-color: #CB22EB;
+		}
 	}
 	&--color5 {
-		text-decoration-color: purple;
+		&:before {
+			--decorator-color: #ED1D67;
+		}
+	}
+	&--color6 {
+		&:before {
+			--decorator-color: #F27E04;
+		}
+	}
+	&--color7 {
+		&:before {
+			--decorator-color: #FFA600;
+		}
 	}
 }
 .linkDecoratorStyle {
 	&--solid {
-		text-decoration-style: solid;
+		&:before {
+			height: 2px;
+			background-color: var(--decorator-color);
+		}
 	}
-	&-_dashed {
-		text-decoration-style: dashed;
+	&--dashed {
+		&:before {
+			height: 2px;
+			background-image: linear-gradient(90deg, var(--decorator-color) 0%, var(--decorator-color) 60%, transparent 60%, transparent 100%);
+			background-size: 10px 2px;
+			background-repeat: repeat-x;
+			background-color: transparent;
+		}
 	}
 	&--dotted {
-		text-decoration-style: dotted;
+		&:before {
+			height: 2px;
+			background-image: linear-gradient(90deg, var(--decorator-color) 0%, var(--decorator-color) 50%, transparent 50%, transparent 100%);
+			background-size: 4px 2px;
+			background-repeat: repeat-x;
+			background-color: transparent;
+		}
 	}
 	&--double {
-		text-decoration-style: double;
+		&:before {
+			height: 3px;
+			bottom: -0.5px;
+			background-image: linear-gradient(180deg, var(--decorator-color) 0%, var(--decorator-color) 33.3%, transparent 33.3%, transparent 66.6%, var(--decorator-color) 66.6%, var(--decorator-color) 100%);
+			background-size: 1px 3px;
+			background-repeat: repeat-x;
+			background-color: transparent;
+		}
 	}
 	&--wavy {
-		text-decoration-style: wavy;
+		&:before {
+			height: 6px;
+			bottom: -2px;
+			background-image: radial-gradient(circle at 50% 100%, transparent 20%, var(--decorator-color) 21%, var(--decorator-color) 34%, transparent 35%, transparent),
+							  radial-gradient(circle at 50% 0%, transparent 20%, var(--decorator-color) 21%, var(--decorator-color) 34%, transparent 35%, transparent);
+			background-position: 0 -3px, -4px 3px;
+			background-size: 8px 6px;
+			background-repeat: repeat-x;
+			background-color: transparent;
+		}
+	}
+	&--zig-zag {
+		&:before {
+			height: 6px;
+			bottom: -2px;
+			background-image: linear-gradient(135deg, #fff 30%, transparent 30%),
+							  linear-gradient(225deg, #fff  30%, transparent 30%),
+							  linear-gradient(315deg, #fff 30%, transparent 30%),
+							  linear-gradient(45deg, #fff 30%, transparent 30%);
+			background-position: -3px 0, -3px 0, 0 0, 0 0;
+			background-size: 6px 6px;
+			background-repeat: repeat-x;
+			background-color: var(--decorator-color);
+		}
 	}
 }

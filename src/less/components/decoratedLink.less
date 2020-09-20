@@ -1,5 +1,9 @@
+@import '../basis/linkBase';
+
 .decoratedLink {
-	text-decoration-color: @color-gray;
-	text-decoration-style: solid;
-	text-decoration-line: underline;
+	.linkBase();
+
+	&:before {
+		height: 2px;
+	}
 }
