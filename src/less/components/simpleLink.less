@@ -1,7 +1,10 @@
 @import '../basis/linkBase';
+@import '../basis/sharedVariables';
 
 .simpleLink {
 	&:hover {
 		.linkBase(@initialColor: false, @position: 'middle');
+
+		color: fade(@defaultFontColor, 50%);
 	}
 }
