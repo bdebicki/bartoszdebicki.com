@@ -3,8 +3,14 @@
 
 .simpleLink {
 	&:hover {
-		.linkBase(@initialColor: false, @position: 'middle');
-
 		color: fade(@defaultFontColor, 50%);
+
+		&:not(.simpleLink--with-icon) {
+			.linkBase(@initialColor: false, @position: 'middle');
+		}
+
+		.simpleLink__hoverHelper {
+			.linkBase(@initialColor: false, @position: 'middle');
+		}
 	}
 }
