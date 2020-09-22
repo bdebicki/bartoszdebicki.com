@@ -1,13 +1,21 @@
-.linkBase(@initialColor: true) {
+.linkBase(@initialColor: true, @position: 'bottom') {
 	position: relative;
 
 	&:before {
 		content: '';
 		position: absolute;
 		right: 0;
-		bottom: 0;
 		left: 0;
-		z-index: -1;
+
+		& when (@position = 'bottom') {
+			bottom: 0;
+			z-index: -1;
+		}
+
+		& when (@position = 'middle') {
+			top: 50%;
+			z-index: 1;
+		}
 
 		& when (@initialColor = true) {
 			background-color: currentColor;
