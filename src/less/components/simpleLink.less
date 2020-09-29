@@ -3,12 +3,9 @@
 
 .simpleLink {
 	&:hover {
-		color: fade(@defaultFontColor, 50%);
+		color: var(--txt-color);
 
-		&:not(.simpleLink--with-icon) {
-			.linkBase(@initialColor: false, @position: 'middle');
-		}
-
+		&:not(.simpleLink--with-icon),
 		.simpleLink__hoverHelper {
 			.linkBase(@initialColor: false, @position: 'middle');
 		}
