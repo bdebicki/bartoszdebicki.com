@@ -3,8 +3,14 @@
 		&,
 		.simpleLink__hoverHelper {
 			&:before {
-				--decorator-color: #ffb997;
-				--txt-color: fade(#a0796c, 50%);
+				.palette1 & {
+					--decorator-color: @color-p1-bg1;
+					--txt-color: fade(@color-p1-txt1, 50%);
+				}
+				.palette2 & {
+					--decorator-color: @color-p2-bg1;
+					--txt-color: fade(@color-p2-txt1, 50%);
+				}
 			}
 		}
 	}
@@ -12,8 +18,14 @@
 		&,
 		.simpleLink__hoverHelper {
 			&:before {
-				--decorator-color: #f67e7d;
-				--txt-color: fade(#9E555F, 50%);
+				.palette1 & {
+					--decorator-color: @color-p1-bg2;
+					--txt-color: fade(@color-p1-txt2, 50%);
+				}
+				.palette2 & {
+					--decorator-color: @color-p2-bg2;
+					--txt-color: fade(@color-p2-txt2, 50%);
+				}
 			}
 		}
 	}
@@ -21,8 +33,14 @@
 		&,
 		.simpleLink__hoverHelper {
 			&:before {
-				--decorator-color: #843b62;
-				--txt-color: fade(#C38FA9, 50%);
+				.palette1 & {
+					--decorator-color: @color-p1-bg3;
+					--txt-color: fade(@color-p1-txt3, 50%);
+				}
+				.palette2 & {
+					--decorator-color: @color-p2-bg3;
+					--txt-color: fade(@color-p2-txt3, 50%);
+				}
 			}
 		}
 	}
@@ -30,8 +48,14 @@
 		&,
 		.simpleLink__hoverHelper {
 			&:before {
-				--decorator-color: #0b032d;
-				--txt-color: fade(#79738D, 50%);
+				.palette1 & {
+					--decorator-color: @color-p1-bg4;
+					--txt-color: fade(@color-p1-txt4, 50%);
+				}
+				.palette2 & {
+					--decorator-color: @color-p2-bg4;
+					--txt-color: fade(@color-p2-txt4, 50%);
+				}
 			}
 		}
 	}
@@ -39,12 +63,19 @@
 		&,
 		.simpleLink__hoverHelper {
 			&:before {
-				--decorator-color: #74546a;
-				--txt-color: fade(#B69FAD, 50%);
+				.palette1 & {
+					--decorator-color: @color-p1-bg5;
+					--txt-color: fade(@color-p1-txt5, 50%);
+				}
+				.palette2 & {
+					--decorator-color: @color-p2-bg5;
+					--txt-color: fade(@color-p2-txt5, 50%);
+				}
 			}
 		}
 	}
 }
+
 .linkDecoratorStyle {
 	&--solid {
 		&,

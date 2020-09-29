@@ -1,22 +1,54 @@
+@import '../basis/colors';
+
 .selectionColor {
 	&--color1 {
-		--selection-bg-color: #ffb997;
-		--selection-txt-color: #a0796c;
+		.palette1& {
+			--selection-bg-color: @color-p1-bg1;
+			--selection-txt-color: @color-p1-txt1;
+		}
+		.palette2& {
+			--selection-bg-color: @color-p2-bg1;
+			--selection-txt-color: @color-p2-txt1;
+		}
 	}
 	&--color2 {
-		--selection-bg-color: #f67e7d;
-		--selection-txt-color: #9E555F;
+		.palette1& {
+			--selection-bg-color: @color-p1-bg2;
+			--selection-txt-color: @color-p1-txt2;
+		}
+		.palette2& {
+			--selection-bg-color: @color-p2-bg2;
+			--selection-txt-color: @color-p2-txt2;
+		}
 	}
 	&--color3 {
-		--selection-bg-color: #843b62;
-		--selection-txt-color: #C38FA9;
+		.palette1& {
+			--selection-bg-color: @color-p1-bg3;
+			--selection-txt-color: @color-p1-txt3;
+		}
+		.palette2& {
+			--selection-bg-color: @color-p2-bg3;
+			--selection-txt-color: @color-p2-txt3;
+		}
 	}
 	&--color4 {
-		--selection-bg-color: #0b032d;
-		--selection-txt-color: #79738D;
+		.palette1& {
+			--selection-bg-color: @color-p1-bg4;
+			--selection-txt-color: @color-p1-txt4;
+		}
+		.palette2& {
+			--selection-bg-color: @color-p2-bg4;
+			--selection-txt-color: @color-p2-txt4;
+		}
 	}
 	&--color5 {
-		--selection-bg-color: #74546a;
-		--selection-txt-color: #B69FAD;
+		.palette1& {
+			--selection-bg-color: @color-p1-bg5;
+			--selection-txt-color: @color-p1-txt5;
+		}
+		.palette2& {
+			--selection-bg-color: @color-p2-bg5;
+			--selection-txt-color: @color-p2-txt5;
+		}
 	}
 }
