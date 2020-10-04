@@ -1,15 +1,21 @@
+@import '../basis/colors';
+
 .linkDecoratorColor {
 	&--color1 {
 		&,
 		.simpleLink__hoverHelper {
-			&:before {
-				.palette1 & {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt1, 50%);
+
+				&:before {
 					--decorator-color: @color-p1-bg1;
-					--txt-color: fade(@color-p1-txt1, 50%);
 				}
-				.palette2 & {
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt1, 50%);
+
+				&:before {
 					--decorator-color: @color-p2-bg1;
-					--txt-color: fade(@color-p2-txt1, 50%);
 				}
 			}
 		}
@@ -17,14 +23,18 @@
 	&--color2 {
 		&,
 		.simpleLink__hoverHelper {
-			&:before {
-				.palette1 & {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt2, 50%);
+
+				&:before {
 					--decorator-color: @color-p1-bg2;
-					--txt-color: fade(@color-p1-txt2, 50%);
 				}
-				.palette2 & {
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt2, 50%);
+
+				&:before {
 					--decorator-color: @color-p2-bg2;
-					--txt-color: fade(@color-p2-txt2, 50%);
 				}
 			}
 		}
@@ -32,14 +42,18 @@
 	&--color3 {
 		&,
 		.simpleLink__hoverHelper {
-			&:before {
-				.palette1 & {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt3, 50%);
+
+				&:before {
 					--decorator-color: @color-p1-bg3;
-					--txt-color: fade(@color-p1-txt3, 50%);
 				}
-				.palette2 & {
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt3, 50%);
+
+				&:before {
 					--decorator-color: @color-p2-bg3;
-					--txt-color: fade(@color-p2-txt3, 50%);
 				}
 			}
 		}
@@ -47,14 +61,18 @@
 	&--color4 {
 		&,
 		.simpleLink__hoverHelper {
-			&:before {
-				.palette1 & {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt4, 50%);
+
+				&:before {
 					--decorator-color: @color-p1-bg4;
-					--txt-color: fade(@color-p1-txt4, 50%);
 				}
-				.palette2 & {
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt4, 50%);
+
+				&:before {
 					--decorator-color: @color-p2-bg4;
-					--txt-color: fade(@color-p2-txt4, 50%);
 				}
 			}
 		}
@@ -62,14 +80,18 @@
 	&--color5 {
 		&,
 		.simpleLink__hoverHelper {
-			&:before {
-				.palette1 & {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt5, 50%);
+
+				&:before {
 					--decorator-color: @color-p1-bg5;
-					--txt-color: fade(@color-p1-txt5, 50%);
 				}
-				.palette2 & {
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt5, 50%);
+
+				&:before {
 					--decorator-color: @color-p2-bg5;
-					--txt-color: fade(@color-p2-txt5, 50%);
 				}
 			}
 		}
