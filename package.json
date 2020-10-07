@@ -5,6 +5,10 @@
     "type": "git",
     "url": "git://github.com/bdebicki/bartoszdebicki.com"
   },
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "build": "rm -rf ./dist/* && webpack --mode production",
     "watch": "webpack-dev-server --content-base public",
