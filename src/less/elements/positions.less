@@ -1,6 +1,14 @@
+@import '../basis/typography';
+@import '../helpers/responsiveBreakpoints';
+
 .positions {
 	color: @color-darkGray;
 	font-size: @fontSize--l;
 	font-style: italic;
 	line-height: @lineHeight--l;
+
+	.phone({
+		font-size: @fontSize--m;
+		line-height: @lineHeight--m;
+	})
 }
