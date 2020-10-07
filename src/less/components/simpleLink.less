@@ -1,0 +1,13 @@
+@import '../basis/linkBase';
+@import '../basis/sharedVariables';
+
+.simpleLink {
+	&:hover {
+		color: var(--txt-color);
+
+		&:not(.simpleLink--with-icon),
+		.simpleLink__hoverHelper {
+			.linkBase(@initialColor: false, @position: 'middle');
+		}
+	}
+}

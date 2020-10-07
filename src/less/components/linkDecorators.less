@@ -1,0 +1,147 @@
+@import '../basis/colors';
+
+.linkDecoratorColor {
+	&--color1 {
+		&,
+		.simpleLink__hoverHelper {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt1, 50%);
+
+				&:before {
+					--decorator-color: @color-p1-bg1;
+				}
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt1, 50%);
+
+				&:before {
+					--decorator-color: @color-p2-bg1;
+				}
+			}
+		}
+	}
+	&--color2 {
+		&,
+		.simpleLink__hoverHelper {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt2, 50%);
+
+				&:before {
+					--decorator-color: @color-p1-bg2;
+				}
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt2, 50%);
+
+				&:before {
+					--decorator-color: @color-p2-bg2;
+				}
+			}
+		}
+	}
+	&--color3 {
+		&,
+		.simpleLink__hoverHelper {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt3, 50%);
+
+				&:before {
+					--decorator-color: @color-p1-bg3;
+				}
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt3, 50%);
+
+				&:before {
+					--decorator-color: @color-p2-bg3;
+				}
+			}
+		}
+	}
+	&--color4 {
+		&,
+		.simpleLink__hoverHelper {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt4, 50%);
+
+				&:before {
+					--decorator-color: @color-p1-bg4;
+				}
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt4, 50%);
+
+				&:before {
+					--decorator-color: @color-p2-bg4;
+				}
+			}
+		}
+	}
+	&--color5 {
+		&,
+		.simpleLink__hoverHelper {
+			.palette1 & {
+				--txt-color: fade(@color-p1-txt5, 50%);
+
+				&:before {
+					--decorator-color: @color-p1-bg5;
+				}
+			}
+			.palette2 & {
+				--txt-color: fade(@color-p2-txt5, 50%);
+
+				&:before {
+					--decorator-color: @color-p2-bg5;
+				}
+			}
+		}
+	}
+}
+
+.linkDecoratorStyle {
+	&--solid {
+		&,
+		.simpleLink__hoverHelper {
+			&:before {
+				height: 2px;
+				background-color: var(--decorator-color);
+			}
+		}
+	}
+	&--dashed {
+		&,
+		.simpleLink__hoverHelper {
+			&:before {
+				height: 2px;
+				background-image: linear-gradient(90deg, var(--decorator-color) 0%, var(--decorator-color) 60%, transparent 60%, transparent 100%);
+				background-size: 10px 2px;
+				background-repeat: repeat-x;
+				background-color: transparent;
+			}
+		}
+	}
+	&--dotted {
+		&,
+		.simpleLink__hoverHelper {
+			&:before {
+				height: 2px;
+				background-image: linear-gradient(90deg, var(--decorator-color) 0%, var(--decorator-color) 50%, transparent 50%, transparent 100%);
+				background-size: 4px 2px;
+				background-repeat: repeat-x;
+				background-color: transparent;
+			}
+		}
+	}
+	&--double {
+		&,
+		.simpleLink__hoverHelper {
+			&:before {
+				height: 3px;
+				background-image: linear-gradient(180deg, var(--decorator-color) 0%, var(--decorator-color) 33.3%, transparent 33.3%, transparent 66.6%, var(--decorator-color) 66.6%, var(--decorator-color) 100%);
+				background-size: 1px 3px;
+				background-repeat: repeat-x;
+				background-color: transparent;
+			}
+		}
+	}
+}

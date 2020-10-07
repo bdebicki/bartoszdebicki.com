@@ -1,0 +1,63 @@
+@import '../basis/colors';
+@import '../basis/settings';
+@import '../basis/spacings';
+
+.icon {
+	@pseudoEl: ~'after';
+
+	.iconBase(@width, @height, @name, @color: @defaultFontColor, @align: center) {
+		display: inline-flex;
+		align-items: @align;
+
+		&:@{pseudoEl} {
+			content: '';
+			display: inline-block;
+			width: @width;
+			height: @height;
+			background-color: @color;
+			mask-image: url("../../img/@{name}.svg");
+			mask-size: cover;
+		}
+	}
+
+	&--replace-content {
+		overflow: hidden;
+		text-indent: -5000px;
+	}
+	&--in-text {
+		&:@{pseudoEl} {
+			margin-left: @spaceSize;
+		}
+	}
+
+	&--bike {
+		.iconBase(
+			@width: 35px,
+			@height: 20px,
+			@name: 'bike'
+		);
+	}
+	&--heart {
+		.iconBase(
+			@width: 18px,
+			@height: 15px,
+			@name: 'heart',
+			@color: @color-red
+		);
+	}
+	&--ticket {
+		.iconBase(
+			@width: 40px,
+			@height: 28px,
+			@name: 'ticket',
+			@align: 'baseline'
+		);
+	}
+	&--vinyl {
+		.iconBase(
+			@width: 24px,
+			@height: 24px,
+			@name: 'vinyl'
+		);
+	}
+}
