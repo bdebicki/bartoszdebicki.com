@@ -20,5 +20,8 @@
 		& when (@initialColor = true) {
 			background-color: currentColor;
 		}
+		& when (isColor(@initialColor)) {
+			background-color: @initialColor;
+		}
 	}
 }

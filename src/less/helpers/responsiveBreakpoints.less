@@ -48,6 +48,12 @@
 	}
 }
 
+.mobile(@content) {
+	@media screen and (max-width: @breakpoint-tablet-max) {
+		@content();
+	}
+}
+
 .contentFullWidth(@content) {
 	@media screen and (max-width: @breakpoint-content-max) {
 		@content();
