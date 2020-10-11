@@ -12,7 +12,7 @@ const config = {
 	],
 	output: {
 		path: path.resolve(__dirname, 'public'),
-		filename: 'app.[hash].js',
+		filename: 'bartoszdebicki.[hash].js',
 	},
 	resolve: {
 		modules: [__dirname, 'node_modules'],
