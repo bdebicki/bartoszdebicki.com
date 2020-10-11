@@ -1,13 +1,46 @@
-@import '../basis/linkBase';
+@import '../helpers/linkBase';
+@import '../helpers/responsiveBreakpoints';
+@import '../basis/colors';
 @import '../basis/sharedVariables';
 
 .simpleLink {
-	&:hover {
-		color: var(--txt-color);
-
+	.handlers(@content) {
 		&:not(.simpleLink--with-icon),
 		.simpleLink__hoverHelper {
-			.linkBase(@initialColor: false, @position: 'middle');
+			@content();
 		}
 	}
+
+	.simpleLink__hoverHelper {
+		line-height: normal;
+	}
+
+	.desktop({
+		&:hover {
+			color: var(--txt-color);
+
+			.handlers({
+				.linkBase(@initialColor: false, @position: 'middle');
+			})
+		}
+	});
+
+	.mobile({
+		.handlers({
+			.linkBase(@initialColor: @color-lightGray);
+
+			&:before {
+				height: 2px;
+			}
+		});
+
+		&--weight-light {
+			.handlers({
+				&:before {
+					height: 1px;
+					background-color: @color-gray;
+				}
+			});
+		}
+	});
 }

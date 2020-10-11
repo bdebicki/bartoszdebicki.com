@@ -5,9 +5,9 @@
 .icon {
 	@pseudoEl: ~'after';
 
-	.iconBase(@width, @height, @name, @color: @defaultFontColor, @align: center) {
+	.iconBase(@width, @height, @name, @color: @defaultFontColor, @align: 'center') {
 		display: inline-flex;
-		align-items: @align;
+		align-items: ~'@{align}';
 
 		&:@{pseudoEl} {
 			content: '';
@@ -32,7 +32,7 @@
 
 	&--bike {
 		.iconBase(
-			@width: 35px,
+			@width: 34px,
 			@height: 20px,
 			@name: 'bike'
 		);

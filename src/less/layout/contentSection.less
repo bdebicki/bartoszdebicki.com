@@ -1,5 +1,15 @@
+@import '../helpers/responsiveBreakpoints';
+
 #contentSection {
 	margin-bottom: 77px;
 	font-style: italic;
 	white-space: nowrap;
+
+	.contentFullWidth({
+		white-space: normal;
+	});
+
+	.phone({
+		margin-bottom: 40px;
+	})
 }

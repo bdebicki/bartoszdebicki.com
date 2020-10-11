@@ -1,0 +1,12 @@
+@import '../basis/sharedVariables';
+@import '../helpers/responsiveBreakpoints';
+
+#contentContainer {
+	.contentFullWidth({
+		margin: @contentMargin;
+	});
+
+	.phone({
+		margin: @contentMargin-phone;
+	})
+}

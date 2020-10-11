@@ -1,6 +1,7 @@
 @import './colors';
 @import './typography';
 @import './sharedVariables';
+@import '../helpers/responsiveBreakpoints';
 
 //local vars
 @selectionColor: var(--selection-bg-color);
@@ -14,16 +15,21 @@
 @paragraphSpacing: 7px;
 
 html {
+	min-width: 320px;
 	min-height: 100%;
 	background: @color-white;
 	color: @defaultFontColor;
+	font-family: @fontName;
+	font-size: 25px;
+	line-height: @defaultLineHeight;
+
+
+	.phone({
+		font-size: 20px;
+	})
 }
 body {
-	min-width: 320px;
 	height: 100%;
-	font-family: @fontName;
-	font-size: @defaultFontSize;
-	line-height: @defaultLineHeight;
 }
 
 h1 {
