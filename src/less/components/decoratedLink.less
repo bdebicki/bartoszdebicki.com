@@ -1,9 +1,14 @@
-@import 'src/less/helpers/linkBase';
+@import '../helpers/responsiveBreakpoints';
+@import '../helpers/linkBase';
 
 .decoratedLink {
 	.linkBase();
 
 	&:before {
 		height: 2px;
+
+		.mobile({
+			background-color: var(--mobile-decorator-color);
+		});
 	}
 }
