@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PostCSSPresetEnv = require('postcss-preset-env');
 const SvgToMiniDataURI = require('mini-svg-data-uri');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = {
   devtool: 'eval',
@@ -47,7 +48,7 @@ const config = {
       {
         test: /\.svg$/i,
         use: [
-  {
+          {
             loader: 'url-loader',
             options: {
               generator: (content) => SvgToMiniDataURI(content.toString()),
@@ -67,6 +68,14 @@ const config = {
     }),
     new MiniCssExtractPlugin({
       filename: 'bartoszdebicki.[hash].css',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/pdf/*.pdf',
+          to: 'files/[name].pdf',
+        },
+      ],
     }),
   ],
 };
