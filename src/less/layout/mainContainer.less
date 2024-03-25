@@ -1,5 +1,13 @@
+@import '../basis/colors';
+@import '../helpers/responsiveBreakpoints';
+
 #mainContainer {
 	display: flex;
+
 	align-items: center;
 	justify-content: center;
+
+	.desktop({
+		border: 24px solid @color-darkGray;
+	})
 }
