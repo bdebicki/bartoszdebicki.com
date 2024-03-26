@@ -1,4 +1,6 @@
-.linkBase(@initialColor: true, @position: 'bottom') {
+@import '../helpers/responsiveBreakpoints';
+
+.linkBase(@initialColor: true, @position: 'bottom', @action: false) {
 	display: inline-block;
 	position: relative;
 	line-height: normal;
@@ -13,7 +15,6 @@
 			bottom: 0;
 			z-index: -1;
 		}
-
 		& when (@position = 'middle') {
 			top: 50%;
 			z-index: 1;
@@ -24,6 +25,21 @@
 		}
 		& when (isColor(@initialColor)) {
 			background-color: @initialColor;
+		}
+
+		& when (@action = true) {
+			background: transparent;
+		}
+	}
+
+	& when (@action = true) {
+		&:after {
+			transform: translate(-50%, -50%);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			color: var(--decorator-color);
+			pointer-events: none;
 		}
 	}
 }

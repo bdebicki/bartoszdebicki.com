@@ -14,14 +14,31 @@
 	.simpleLink__hoverHelper {
 		line-height: normal;
 	}
+	&.simpleLink--with-action {
+		&:after {
+			display: none;
+		}
+	}
 
 	.desktop({
 		&:hover {
 			color: var(--txt-color);
 
-			.handlers({
-				.linkBase(@initialColor: false, @position: 'middle');
-			})
+			&:not(.simpleLink--with-action) {
+				.handlers({
+					.linkBase(@initialColor: false, @position: 'middle');
+				});
+			}
+
+			&.simpleLink--with-action {
+				&:after {
+					display: block;
+				}
+
+				.handlers({
+					.linkBase(@initialColor: false, @position: 'middle', @action: true);
+				});
+			}
 		}
 	});
 
